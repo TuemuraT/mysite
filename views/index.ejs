@@ -13,7 +13,7 @@
     <!-- %ifdef.~~% -->
     <% if (user.seqUserId % 10 === 3) { %>
       <section>
-        テストパターンB
+        <h2>テストパターンB</h2>
         <ul>
           <!-- %loop.ITEM% -->
           <% for(var item of cartItemList ) { %>
@@ -28,7 +28,7 @@
     <!-- %elif.~~% -->
     <% } else { %>
       <section>
-        通常パターン
+        <h2>通常パターン</h2>
       </section>
     <!-- %endif% -->
     <% } %>
