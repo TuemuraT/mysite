@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>ほげお天気</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <%= title %>
+    <h1>今日の天気は</h1>
+    <p>曇りだったよね</p>
+    <%= user.seqUserId %>
+
+    <!-- %ifdef.~~% -->
+    <% if (user.seqUserId % 10 === 3) { %>
+      <section>
+        テストパターンB
+      </section>
+    <!-- %elif.~~% -->
+    <% } else { %>
+      <section>
+        通常パターン
+      </section>
+    <!-- %endif% -->
+    <% } %>
   </body>
 </html>
