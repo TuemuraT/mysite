@@ -14,6 +14,16 @@
     <% if (user.seqUserId % 10 === 3) { %>
       <section>
         テストパターンB
+        <ul>
+          <!-- %loop.ITEM% -->
+          <% for(var item of cartItemList ) { %>
+            <li>
+              <p>商品名：<%= item.name %></p>
+              <p>価格：<%= item.price %>円</p>
+            </li>
+          <!-- %loop.end% -->
+          <% } %>
+        </ul>
       </section>
     <!-- %elif.~~% -->
     <% } else { %>

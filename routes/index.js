@@ -7,6 +7,16 @@ const testUser = {
   seqUserId: 123123
 };
 
+const cartItemList = [
+  {
+    name: '美味しい水',
+    price: 300
+  },
+  {
+    name: '大豆500g',
+    price: 800
+  }
+];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
