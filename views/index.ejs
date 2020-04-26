@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ほげお天気</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%= title %>
+    <h1>今日の天気は</h1>
+    <p>曇りだったよね</p>
+    <%= user.seqUserId %>
+
+    <!-- %ifdef.~~% -->
+    <% if (user.seqUserId % 10 === 3) { %>
+      <section>
+        <h2>テストパターンB</h2>
+        <ul>
+          <!-- %loop.ITEM% -->
+          <% for(var item of cartItemList ) { %>
+            <li>
+              <p>商品名：<%= item.name %></p>
+              <p>価格：<%= item.price %>円</p>
+            </li>
+          <!-- %loop.end% -->
+          <% } %>
+        </ul>
+      </section>
+    <!-- %elif.~~% -->
+    <% } else { %>
+      <section>
+        <h2>通常パターン</h2>
+      </section>
+    <!-- %endif% -->
+    <% } %>
+  </body>
+</html>
